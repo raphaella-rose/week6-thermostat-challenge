@@ -12,6 +12,8 @@ class Thermostat {
     this.currentTemp += 1;
     if (this.isPowerSavingOn() && this.currentTemp > 25) {
     this.currentTemp = 25;
+    } else if (!this.isPowerSavingOn() && this.currentTemp > 32) {
+      this.currentTemp = 32;
     }
   }
 
