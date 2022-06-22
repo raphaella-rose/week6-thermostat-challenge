@@ -60,4 +60,27 @@ describe(Thermostat, () => {
     thermostat.reset();
     expect(thermostat.temp()).toBe(20);
   })
+
+  it('user can see current energy usage when medium-usage', () => {
+    const thermostat = new Thermostat();
+    expect(thermostat.currentEnergyUsage()).toBe('medium-usage');
+  })
+
+  it('user can see current energy usage when low-usage', () => {
+    const thermostat = new Thermostat();
+    for (let i = 0; i < 5; i++) {
+      thermostat.down();
+    };
+    expect(thermostat.currentEnergyUsage()).toBe('low-usage');
+  })
+
+  it('user can see current energy usage when high-usage', () => {
+    const thermostat = new Thermostat();
+    thermostat.setPowerSavingMode(false);
+    for (let i = 0; i < 6; i++) {
+      thermostat.up();
+    };
+    expect(thermostat.currentEnergyUsage()).toBe('high-usage');
+  })
+
 })
