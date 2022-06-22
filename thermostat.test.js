@@ -23,6 +23,20 @@ describe(Thermostat, () => {
     expect(thermostat.isPowerSavingOn()).toBe(true);
   })
 
+  it('user can turn power saving mode off', () => {
+    const thermostat = new Thermostat();
+    thermostat.setPowerSavingMode(false);
+    expect(thermostat.isPowerSavingOn()).toBe(false);
+  })
+
+  it('the maximum temp with powersaving mode on is 25 degrees', () => {
+    const thermostat = new Thermostat();
+    for (let i = 0; i < 10; i++) {
+      thermostat.up()
+    };
+    expect(thermostat.temp()).toEqual(25);
+  })
+
   // it('the minimum possible temperature is 10 degrees', () => {
   //   const thermostat = new Thermostat();
   //   for (let i = 0; i)
