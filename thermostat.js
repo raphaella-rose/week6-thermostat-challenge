@@ -7,12 +7,12 @@ class Thermostat {
     return this.currentTemp;
   }
 
-  up(amount) {
-    this.currentTemp += amount;
+  up() {
+    this.currentTemp += 1;
   }
 
-  down(amount) {
-    this.currentTemp -= amount;
+  down() {
+    this.currentTemp -= 1;
   }
 }
 
