@@ -6,9 +6,9 @@ describe(Thermostat, () => {
     expect(thermostat.temp()).toBe(20);
   })
 
-  // it('you can increase the temperature with an up method', () => {
-  //   const thermostat = new Thermostat();
-  //   thermostat.up(10);
-  //   expect(thermostat.temp()).toEqual(30)
-  // })
+  it('you can increase the temperature with an up method', () => {
+    const thermostat = new Thermostat();
+    thermostat.up(10);
+    expect(thermostat.temp()).toEqual(30)
+  })
 })

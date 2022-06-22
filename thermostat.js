@@ -1,17 +1,15 @@
 class Thermostat {
-  // constructor() {
-  //   this.temp = 20;
-   
-  // }
-
-  temp() {
-
-    return 20;
+  constructor() {
+    this.currentTemp = 20;
   }
 
-  // up(amount) {
-  //   this.temp += amount;
-  // }
+  temp() {
+    return this.currentTemp;
+  }
+
+  up(amount) {
+    this.currentTemp += amount;
+  }
 }
 
 module.exports = Thermostat;
