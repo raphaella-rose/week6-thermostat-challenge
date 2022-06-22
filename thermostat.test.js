@@ -51,7 +51,13 @@ describe(Thermostat, () => {
     for (let i = 0; i < 15; i++) {
       thermostat.down();
     };
-  
     expect(thermostat.temp()).toEqual(10);
+  })
+
+  it('the user can reset to default temp', () => {
+    const thermostat = new Thermostat();
+    thermostat.up();
+    thermostat.reset();
+    expect(thermostat.temp()).toBe(20);
   })
 })
