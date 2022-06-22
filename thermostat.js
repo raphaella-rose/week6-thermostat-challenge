@@ -10,6 +10,10 @@ class Thermostat {
   up(amount) {
     this.currentTemp += amount;
   }
+
+  down(amount) {
+    this.currentTemp -= amount;
+  }
 }
 
 module.exports = Thermostat;
