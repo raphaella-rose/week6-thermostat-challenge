@@ -46,10 +46,12 @@ describe(Thermostat, () => {
     expect(thermostat.temp()).toEqual(32);
   })
 
-  // it('the minimum possible temperature is 10 degrees', () => {
-  //   const thermostat = new Thermostat();
-  //   for (let i = 0; i)
-  //   thermostat.down();
-  //   expect(thermostat.temp()).toEqual(10);
-  // })
+  it('the minimum possible temperature is 10 degrees', () => {
+    const thermostat = new Thermostat();
+    for (let i = 0; i < 15; i++) {
+      thermostat.down();
+    };
+  
+    expect(thermostat.temp()).toEqual(10);
+  })
 })

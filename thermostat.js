@@ -19,6 +19,9 @@ class Thermostat {
 
   down() {
     this.currentTemp -= 1;
+    if (this.currentTemp < 10) {
+      this.currentTemp = 10;
+    }
   }
 
   isPowerSavingOn() {
