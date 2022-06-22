@@ -14,6 +14,10 @@ class Thermostat {
   down() {
     this.currentTemp -= 1;
   }
+
+  isPowerSavingOn() {
+    return true
+  }
 }
 
 module.exports = Thermostat;

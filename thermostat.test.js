@@ -18,8 +18,14 @@ describe(Thermostat, () => {
     expect(thermostat.temp()).toEqual(19);
   })
 
+  it('power saving mode is on by default', () => {
+    const thermostat = new Thermostat();
+    expect(thermostat.isPowerSavingOn()).toBe(true);
+  })
+
   // it('the minimum possible temperature is 10 degrees', () => {
   //   const thermostat = new Thermostat();
+  //   for (let i = 0; i)
   //   thermostat.down();
   //   expect(thermostat.temp()).toEqual(10);
   // })
