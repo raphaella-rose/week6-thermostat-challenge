@@ -83,4 +83,11 @@ describe(Thermostat, () => {
     expect(thermostat.currentEnergyUsage()).toBe('high-usage');
   })
 
+  it('can turn power mode off then on', () => {
+    const thermostat = new Thermostat();
+    thermostat.setPowerSavingMode(false);
+    thermostat.setPowerSavingMode(true);
+    expect(thermostat.isPowerSavingOn()).toBe(true)
+  })
+
 })

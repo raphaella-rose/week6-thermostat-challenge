@@ -29,7 +29,7 @@ class Thermostat {
   }
 
   setPowerSavingMode(setting) {
-    this.powerSavingMode = false;
+    this.powerSavingMode = setting;
   }
 
   reset() {
